@@ -23,7 +23,7 @@ class MemoRequest extends FormRequest
     {
         return [
             'title' => 'required|string|max:50',
-            'body' => 'required',
+            'body' => 'required|string|max:2000',
             // 'occupation_id' => 'required|exists:occupations,id',
             // 'due_date' => 'required|after_or_equal:today',
             // 'is_published' => 'nullable|boolean',
@@ -33,7 +33,7 @@ class MemoRequest extends FormRequest
     public function attributes()
     {
         return [
-            'body' => 'コメント',
+            'body' => '本文',
         ];
     }
 }
